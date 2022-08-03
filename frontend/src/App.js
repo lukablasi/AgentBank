@@ -1,15 +1,20 @@
 import './App.css';
-import Nav from './components/Nav'
+import { Routes, Route } from "react-router-dom";
 import Home from './pages/Home'
-import Footer from './components/Footer'
+import SignIn from './pages/SignIn'
+import User from './pages/User'
+
+
 
 function App() {
   return (
     <div>
-      <Nav />
-      <Home />
-      <Footer />
-    </div>
+    <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="user" element={<User />} />
+        <Route path="signin" element={<SignIn />} />
+      </Routes>
+      </div>
   );
 }
 

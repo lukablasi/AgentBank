@@ -1,5 +1,7 @@
 .main {
   flex: 1;
+  padding-top: 2px;
+  padding-bottom: 6px;
 }
 
 .bg-dark {
@@ -19,3 +21,4 @@
   width: 1px !important;
   white-space: nowrap !important; /* 3 */
 }
+
