@@ -10,7 +10,7 @@ function Nav() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { user } = useSelector((state) => state.auth);
-
+  const profile = useSelector((state) => state.user);
   const onLogout = () => {
     dispatch(logout());
     dispatch(reset());
@@ -29,10 +29,10 @@ function Nav() {
       </Link>
       {user ? (
         <div className="main-nav-logged">
-          <div className="main-nav-item">
+          <Link to="/user" className="main-nav-item">
             <FontAwesomeIcon icon={faCircleUser} className="user-icon" />
-            Adam
-          </div>
+            {profile.firstName}
+          </Link>
           <div className="main-nav-item" onClick={onLogout}>
             Sign Out
           </div>
