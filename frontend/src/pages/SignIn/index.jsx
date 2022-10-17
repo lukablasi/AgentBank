@@ -14,8 +14,9 @@ function SignIn() {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
+    rememberMe: false,
   });
-  const { email, password } = formData;
+  const { email, password, rememberMe } = formData;
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { user, isError, isSuccess, message } = useSelector(
@@ -33,16 +34,24 @@ function SignIn() {
     dispatch(reset());
   }, [user, isError, isSuccess, message, navigate, dispatch]);
   const onChange = (e) => {
-    setFormData((prevState) => ({
-      ...prevState,
-      [e.target.name]: e.target.value,
-    }));
+    if (e.target.name === "rememberMe") {
+      setFormData((prevState) => ({
+        ...prevState,
+        [e.target.name]: e.target.checked,
+      }));
+    } else {
+      setFormData((prevState) => ({
+        ...prevState,
+        [e.target.name]: e.target.value,
+      }));
+    }
   };
   const onSubmit = (e) => {
     e.preventDefault();
     const userData = {
       email,
       password,
+      rememberMe,
     };
     dispatch(login(userData));
   };
@@ -76,7 +85,13 @@ function SignIn() {
               />
             </div>
             <div className="input-remember">
-              <input type="checkbox" id="remember-me" />
+              <input
+                type="checkbox"
+                id="rememberMe"
+                name="rememberMe"
+                value={rememberMe}
+                onChange={onChange}
+              />
               <label htmlFor="remember-me">Remember me</label>
             </div>
 

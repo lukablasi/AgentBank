@@ -19,7 +19,7 @@ function User() {
 
   useEffect(() => {
     if (!user) {
-      navigate("/login");
+      navigate("/signin");
     }
 
     dispatch(getProfile());

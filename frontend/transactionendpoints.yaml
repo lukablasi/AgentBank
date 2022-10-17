@@ -1,0 +1,170 @@
+swagger: '2.0'
+info:
+  title: Bank Argent API documentation - Transactions
+  description: Contains all available API endpoints for transactions info
+  version: '1.0.0'
+  termsOfService: 'http://swagger.io/terms/'
+host: localhost:3001
+basePath: /api/v1
+schemes:
+  - http
+paths:
+  /user/transactions:
+    post:
+      security:
+        - Bearer: []
+      tags:
+        - User Transactions
+      summary: All User Transactions
+      description: API for Transactions
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: header
+          name: Authorization
+          type: string
+          description: Attach Bearer JWT token
+          required: true
+      responses:
+        '200':
+          description: Transictions Retreived Successfully
+          schema:
+            $ref: '#/definitions/Transactions'
+        '400':
+          description: Invalid Fields
+        '500':
+          description: Internal Server Error
+  /user/transactions/transactionID:
+    post:
+      security:
+        - Bearer: []
+      tags:
+        - User Transactions
+      summary: Details of single transaction
+      description: API for single transaction
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: header
+          name: Authorization
+          type: string
+          description: Attach Bearer JWT token
+          required: true
+        - in: body
+          name: body
+          description: Single Transaction Payload
+          required: true
+          schema:
+            $ref: '#/definitions/TransactionIdRequest'
+      responses:
+        '200':
+          description: Single Transictions Details Retreived Successfully
+          schema:
+            $ref: '#/definitions/TransactionIdResponse'
+        '400':
+          description: Invalid Fields
+        '500':
+          description: Internal Server Error
+    put:
+      security:
+        - Bearer: []
+      tags:
+        - User Transactions
+      summary: Edit details of single transaction
+      description: API for editing single transaction
+      consumes:
+        - application/json
+      produces:
+        - application/json
+      parameters:
+        - in: header
+          name: Authorization
+          type: string
+          description: Attach Bearer JWT token
+          required: true
+        - in: body
+          name: body
+          description: Edit single Transaction Payload
+          required: true
+          schema:
+            $ref: '#/definitions/EditTransactionRequest'
+      responses:
+        '200':
+          description: Single Transictions Details Edited Successfully
+          schema:
+            $ref: '#/definitions/EditTransactionResponse'
+        '400':
+          description: Invalid Fields
+        '500':
+          description: Internal Server Error
+securityDefinitions:
+  Bearer:
+    type: apiKey
+    name: Authorization
+    in: header
+definitions:
+  Transactions:
+    properties:
+      id:
+        type: string
+        description: transaction ID
+      amount:
+        type: number
+        description: transaction amount
+      balance:
+        type: number
+        description: balance after transaction
+      date:
+          type: object
+          properties:
+            year:
+              type: number
+            month:
+              type: number
+            day:
+              type: number
+      description:
+        type: string
+        description: transaction description
+  TransactionIdRequest:
+    properties:
+      id:
+        type: string
+        description: transaction ID
+  TransactionIdResponse:
+    properties:
+      transactionType:
+        type: string
+        description: transaction type
+      category:
+        type: string
+        description: transaction category
+      notes:
+        type: string
+        description: transaction notes
+  EditTransactionRequest:
+    properties:
+      id:
+        type: string
+        description: transaction ID
+      body:
+        type: object
+        properties:
+          category:
+            type: string
+          notes:
+            type: string
+  EditTransactionResponse:
+    properties:
+      body:
+        type: object
+        properties:
+          category:
+            type: string
+          notes:
+            type: string
+
