@@ -20,7 +20,7 @@ A secured web app for internet banking. Backend and HTML static elements created
   
   ![](https://github.com/lukablasi/AgentBank/blob/master/screenshots/tonypage.PNG)
 
-<h2>How to install</h2
+<h2>How to install</h2>
 
 <h3>Back End</h3>
 
