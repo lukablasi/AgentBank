@@ -39,7 +39,7 @@ node --version
 mongo --version
 ```
 
-### Instructions
+<h4>Instructions</h4>
 
 1. Fork this repo
 1. Clone the repo onto your computer
@@ -59,7 +59,7 @@ npm run populate-db
 
 Your server should now be running at http://locahost:3001 and you will now have two users in your MongoDB database!
 
-## Populated Database Data
+<h4>Populated Database Data</h4>
 
 Once you run the `populate-db` script, you should have two users in your database:
 
