@@ -1,4 +1,4 @@
-<h1>Agent Bank
+<h1>Agent Bank</h1>
 
 A secured web app for internet banking. Backend and HTML static elements created by OpenClassrooms team. Frontend running on React created by me.
 
