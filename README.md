@@ -42,9 +42,9 @@ mongo --version
 <h4>Instructions</h4>
 
 1. Fork this repo
-1. Clone the repo onto your computer
-1. Open a terminal window in the cloned project
-1. Run the following commands:
+2. Clone the repo onto your computer
+3. Open a terminal window in the cloned project
+4. Run the following commands:
 
 ```bash
 # Install dependencies
@@ -77,6 +77,31 @@ Once you run the `populate-db` script, you should have two users in your databas
 - Email: `steve@rogers.com`,
 - Password: `password456`
 
-## API Documentation
+<h4>API Documentation</h4>
 
 To learn more about how the API works, once you have started your local environment, you can visit: http://localhost:3001/api-docs
+
+<h3>Front End</h3>
+<h4>Instructions</h4>
+1. Open 'frontend' folder.
+2. Run the following commands:
+```bash
+# Install dependencies
+npm install
+
+# Start local dev server
+npm start
+```
+
+<h2>Technologies Used</h2>
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>React</li>
+<li>Redux</li>
+</ul>
+
+<h2>Developed By</h2>
+Lukasz Milcz <br>
+https://www.linkedin.com/in/lukablasi/
