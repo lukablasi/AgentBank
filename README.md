@@ -83,14 +83,14 @@ To learn more about how the API works, once you have started your local environm
 
 <h3>Front End</h3>
 <h4>Instructions</h4>
-1. Open 'frontend' folder.
+1. Open 'frontend' folder. <br>
 2. Run the following commands:
 
 ```bash
 # Install dependencies
 npm install
 
-# Start local dev server
+# Start dev environment
 npm start
 ```
 
