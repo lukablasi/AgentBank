@@ -1,8 +1,24 @@
-# Project #10 - Argent Bank API
+<h1>Agent Bank
 
-This codebase contains the code needed to run the backend for Argent Bank.
+A secured web app for internet banking. Backend and HTML static elements created by OpenClassrooms team. Frontend running on React created by me.
 
-## Getting Started
+<h2>Screenshots</h2>
+
+ Landing Page
+  
+  ![](https://github.com/lukablasi/AgentBank/blob/master/screenshots/mainpage.PNG)
+  
+  Sign In Page
+  
+  ![](https://github.com/lukablasi/AgentBank/blob/master/screenshots/signin.PNG)
+  
+  User's Page - Steve
+  
+  ![](https://github.com/lukablasi/AgentBank/blob/master/screenshots/stevepage.PNG)
+  
+  User's Page - Tony
+  
+  ![](https://github.com/lukablasi/AgentBank/blob/master/screenshots/tonypage.PNG)
 
 ### Prerequisites
 
